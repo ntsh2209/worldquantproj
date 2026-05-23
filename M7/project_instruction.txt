@@ -1,0 +1,766 @@
+This is actually a very well-designed project for a quant-finance course because it tests:
+
+* data engineering
+* statistical modeling
+* regime detection
+* portfolio construction
+* backtesting
+* financial interpretation
+* report writing
+
+The grading rubric strongly rewards:
+
+1. **clarity**
+2. **interpretation**
+3. **financial reasoning**
+4. **professional presentation**
+
+—not just code.
+
+Below is the breakdown of what you should do to maximize marks.
+
+---
+
+# Overall Strategy to Maximize Marks
+
+Your goal is NOT merely to “make the code work.”
+
+Your goal is to produce something that looks like:
+
+* a professional quant research notebook
+* a mini hedge-fund research report
+* easy for instructor to grade
+
+Think:
+
+> “Could a PM understand this in 5 minutes?”
+
+That mindset alone can move you from average → top marks.
+
+---
+
+# What the Instructor REALLY Wants
+
+The instructor wants to see:
+
+| Area              | What They Actually Care About |
+| ----------------- | ----------------------------- |
+| Data prep         | clean alignment + no mistakes |
+| Modeling          | understanding regimes         |
+| Finance intuition | why assets behave differently |
+| Backtesting       | no lookahead bias             |
+| Evaluation        | proper metrics                |
+| Writing           | professional and readable     |
+| Interpretation    | not just dumping output       |
+
+---
+
+# HIGH-SCORING PROJECT STRUCTURE
+
+Your notebook should look like this:
+
+1. Introduction
+2. Data Collection
+3. Exploratory Analysis
+4. Markov Chain Model
+5. Hidden Markov Model
+6. Model Comparison
+7. Regime Interpretation
+8. Strategy Design
+9. Backtesting
+10. Benchmark Comparison
+11. Sensitivity Analysis
+12. Conclusion
+13. References
+
+That structure alone improves readability dramatically.
+
+---
+
+# MASTER TODO LIST (HIGH MARKS VERSION)
+
+# STEP 1 — DATA PREPARATION & EDA
+
+## MUST DO
+
+### Download:
+
+* TLT
+* GLD
+* SPY
+* ^VIX
+
+Use:
+
+* adjusted close
+* common date range
+
+## Compute:
+
+For ETFs:
+
+* log returns
+
+For VIX:
+Choose ONE:
+
+* percentage returns
+  OR
+* first differences
+
+Use log returns consistently.
+
+---
+
+# HIGH-MARKS IMPROVEMENTS
+
+## Add:
+
+### Table of summary statistics
+
+Include:
+
+* mean
+* std
+* skewness
+* kurtosis
+
+This looks professional.
+
+---
+
+## Plot 1:
+
+ETF returns over time
+
+Requirements:
+
+* axis labels
+* legend
+* title
+* readable scale
+
+---
+
+## Plot 2:
+
+VIX changes
+
+Add:
+
+* shaded crisis periods if possible
+* interpretation
+
+Example:
+
+> “Large VIX spikes correspond to stress periods such as COVID and 2022 tightening.”
+
+That earns interpretation marks.
+
+---
+
+## Add Correlation Heatmap
+
+This is NOT required.
+
+But it looks excellent.
+
+Show:
+
+* SPY negatively correlated with VIX
+* GLD defensive behavior
+* TLT flight-to-safety periods
+
+This gives “quant maturity.”
+
+---
+
+# Common Mistakes (Avoid)
+
+## DO NOT:
+
+* use raw prices in modeling
+* leave NaNs
+* forget date alignment
+* use simple returns inconsistently
+
+---
+
+# STEP 2 — MODELING VIX REGIMES
+
+This is the CORE of the project.
+
+You should absolutely do BOTH:
+
+1. Discrete Markov Chain
+2. Hidden Markov Model
+
+Even if one is selected later.
+
+That gives stronger comparison.
+
+---
+
+# PART A — DISCRETE MARKOV CHAIN
+
+## TODO
+
+### Create states:
+
+Use quantiles.
+
+Example:
+
+* Low volatility
+* Medium volatility
+* High volatility
+
+Use:
+
+* 33%
+* 66%
+
+thresholds.
+
+---
+
+## Estimate:
+
+Transition matrix.
+
+Interpret:
+Example:
+
+> “High-volatility states show persistence, indicating volatility clustering.”
+
+This sentence matters a LOT.
+
+---
+
+## Compute:
+
+Stationary distribution.
+
+Explain:
+Long-run probability of each regime.
+
+---
+
+## Visualizations
+
+Create:
+
+* heatmap of transition matrix
+* state-colored VIX chart
+
+These are high-value visuals.
+
+---
+
+# PART B — HIDDEN MARKOV MODEL (VERY IMPORTANT)
+
+This is where strong marks come from.
+
+Use:
+hmmlearn
+
+Fit:
+
+* 2-state Gaussian HMM
+* 3-state Gaussian HMM
+
+---
+
+# TODO
+
+## For each model:
+
+Extract:
+
+* means
+* variances
+* transition matrix
+* hidden states
+* log likelihood
+
+---
+
+## Visualizations
+
+Create:
+
+### Color-coded VIX regime plot
+
+This is essential.
+
+Instructor LOVES this plot.
+
+---
+
+## Add:
+
+Smoothed probability plots.
+
+This is a strong “advanced” addition.
+
+---
+
+# HIGH-MARKS INTERPRETATION
+
+Example:
+
+* State 1 = calm markets
+* State 2 = moderate uncertainty
+* State 3 = crisis/panic
+
+Relate to:
+
+* COVID crash
+* inflation regime
+* Fed tightening
+
+This demonstrates finance understanding.
+
+---
+
+# STEP 3 — MODEL SELECTION
+
+This section is heavily weighted conceptually.
+
+---
+
+# MUST INCLUDE TABLE
+
+| Model | States | LogLik | AIC | BIC |
+| ----- | ------ | ------ | --- | --- |
+
+Compare:
+
+* MC 2-state
+* MC 3-state
+* HMM 2-state
+* HMM 3-state
+
+---
+
+# IMPORTANT
+
+Do NOT automatically pick lowest AIC.
+
+Discuss:
+
+* interpretability
+* regime stability
+* overfitting
+
+Example:
+
+> “Although the 3-state model improved likelihood, the 2-state HMM produced more economically interpretable regimes.”
+
+This sounds professional.
+
+---
+
+# REGIME ANALYSIS (IMPORTANT)
+
+Compute conditional statistics:
+
+| State | SPY Mean | GLD Mean | TLT Mean | Std |
+| ----- | -------- | -------- | -------- | --- |
+
+Then create:
+
+* grouped bar chart
+
+---
+
+# KEY INSIGHT TO DISCUSS
+
+Expected intuition:
+
+* SPY performs best in calm regimes
+* TLT/GLD perform better during stress
+* VIX spikes hurt equities
+
+If results differ:
+discuss WHY.
+
+That earns marks.
+
+---
+
+# STEP 4 — STRATEGY DESIGN
+
+This is where many groups lose marks.
+
+Do NOT make this vague.
+
+---
+
+# BEST APPROACH
+
+Use:
+
+* 1-day lag
+* no lookahead bias
+
+VERY IMPORTANT.
+
+Mention explicitly:
+
+> “Signals generated at time t are executed at t+1.”
+
+That is quant-professional language.
+
+---
+
+# STRATEGY RULE TABLE
+
+Make a clean table:
+
+| Regime   | Allocation        |
+| -------- | ----------------- |
+| Calm     | 100% SPY          |
+| Moderate | 60% GLD / 40% SPY |
+| Crisis   | 100% TLT          |
+
+OR based on your estimated results.
+
+---
+
+# HIGH-MARKS IMPROVEMENT
+
+Instead of pure 100%:
+use:
+
+* 60/40 split between top two assets.
+
+Why?
+Because:
+
+* more realistic
+* smoother equity curve
+* less overfitting
+
+Mention this.
+
+---
+
+# STEP 5 — BACKTESTING
+
+THIS SECTION CAN MAKE OR BREAK THE PROJECT.
+
+---
+
+# MUST DO PROPERLY
+
+## Strategy Return Formula
+
+Use lagged weights:
+[
+R_{t+1}^{strategy} = w_t^\top R_{t+1}
+]
+
+Inline visualization helps here:
+R_{t+1}^{strategy}=w_t^{\top}R_{t+1}
+
+This shows proper execution logic.
+
+---
+
+# MUST COMPUTE
+
+## Performance Metrics
+
+| Metric                |
+| --------------------- |
+| Cumulative Return     |
+| Annualized Return     |
+| Annualized Volatility |
+| Sharpe Ratio          |
+| Maximum Drawdown      |
+
+---
+
+# MUST COMPARE AGAINST
+
+1. Equal-weight benchmark
+2. Buy-and-hold SPY
+
+---
+
+# VERY IMPORTANT VISUAL
+
+Create:
+
+### cumulative equity curves
+
+This is probably the most important chart.
+
+Should include:
+
+* strategy
+* equal weight
+* SPY
+
+---
+
+# HIGH-MARKS ADDITIONS
+
+## Add Drawdown Plot
+
+Not required.
+
+But extremely strong addition.
+
+---
+
+## Add Regime Timeline Under Equity Curve
+
+Very professional look.
+
+---
+
+# SENSITIVITY ANALYSIS (HIGH VALUE)
+
+Most groups will do weak sensitivity analysis.
+
+You should test:
+
+* 2 vs 3 states
+* different training windows
+* different quantile thresholds
+
+Then discuss:
+
+* robustness
+* overfitting risk
+
+This is a HUGE differentiator.
+
+---
+
+# REPORT WRITING STRATEGY
+
+The rubric strongly emphasizes writing.
+
+---
+
+# TECHNICAL REPORT SHOULD INCLUDE
+
+For EVERY section:
+
+## 1. Question
+
+## 2. Code
+
+## 3. Output
+
+## 4. Interpretation
+
+Do NOT dump giant code blocks.
+
+Break them into logical cells.
+
+---
+
+# NON-TECHNICAL REPORT
+
+This matters a LOT.
+
+Write like an investment memo.
+
+Avoid:
+
+* EM algorithm
+* Gaussian estimation
+* covariance structures
+
+Instead say:
+
+* “market stress”
+* “defensive assets”
+* “risk-adjusted returns”
+
+---
+
+# WHAT TOP GROUPS DO
+
+Top groups:
+
+* interpret every chart
+* explain economic intuition
+* justify modeling decisions
+* discuss limitations
+
+Weak groups:
+
+* dump outputs
+* no explanations
+* no finance reasoning
+
+---
+
+# PROFESSIONAL VISUAL CHECKLIST
+
+Every plot should have:
+
+* title
+* x-axis
+* y-axis
+* legend
+* readable size
+* professional formatting
+
+No default ugly matplotlib plots.
+
+Use:
+
+* consistent style
+* larger fonts
+* tight layout
+
+---
+
+# REFERENCES (DO NOT SKIP)
+
+Use MLA citations.
+
+Include:
+
+* Yahoo Finance
+* HMM references
+* Markov regime-switching references
+* any textbooks/articles
+
+Example sources:
+
+* [Yahoo Finance](https://finance.yahoo.com?utm_source=chatgpt.com)
+* [hmmlearn Documentation](https://hmmlearn.readthedocs.io?utm_source=chatgpt.com)
+
+---
+
+# BIGGEST MARK-LOSING MISTAKES
+
+## Avoid ALL of these:
+
+### 1. Lookahead bias
+
+This is critical.
+
+---
+
+### 2. No interpretation
+
+Huge penalty risk.
+
+---
+
+### 3. No benchmark comparison
+
+Mandatory.
+
+---
+
+### 4. Messy notebook
+
+Very costly.
+
+---
+
+### 5. No economic intuition
+
+You need finance reasoning.
+
+---
+
+### 6. Overly technical non-technical report
+
+They specifically warned against this.
+
+---
+
+# IDEAL FINAL CONCLUSION
+
+Your conclusion should answer:
+
+1. Did regimes exist?
+2. Did asset behavior differ across regimes?
+3. Did rotation improve risk-adjusted returns?
+4. Was performance robust?
+
+---
+
+# MAXIMUM MARKS GAMEPLAN
+
+If I were optimizing purely for marks:
+
+## PRIORITY 1
+
+Clean notebook + strong interpretation.
+
+## PRIORITY 2
+
+Professional charts/tables.
+
+## PRIORITY 3
+
+Correct backtesting methodology.
+
+## PRIORITY 4
+
+Economic intuition.
+
+## PRIORITY 5
+
+Sensitivity analysis.
+
+---
+
+# FINAL RECOMMENDED STACK
+
+Use:
+
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* yfinance
+* scipy
+* hmmlearn
+
+Entities:
+
+* Jupyter Notebook
+* Yahoo Finance
+* pandas
+* NumPy
+* Matplotlib
+
+---
+
+# Estimated Difficulty Breakdown
+
+| Section              | Difficulty     |
+| -------------------- | -------------- |
+| Data prep            | Easy           |
+| Markov chain         | Medium         |
+| HMM fitting          | Medium-Hard    |
+| Interpretation       | Medium         |
+| Backtesting          | Medium         |
+| Sensitivity analysis | Hard           |
+| Writing              | VERY IMPORTANT |
+
+---
+
+# What Would Make This Look Elite
+
+If you add:
+
+* rolling out-of-sample testing
+* transaction costs
+* drawdown analysis
+* probability heatmaps
+* regime persistence analysis
+
+your project will look substantially above MSc level.
