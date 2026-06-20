@@ -1,0 +1,19 @@
+WRITE SCENARIO/CASE STUDY HERE
+
+Consider 3 different models that were done
+
+(A): A perfect fit to the training data, but that model drastically changes to fit the testing data
+(B): A good fit to the training data and some changes to fit the testing data
+(C): A poor fit to the training data, but that model doesn’t change at all to fit the testing data
+
+Question 1
+Which of these models has the most variance? Provide one argument for your answer.
+
+Question 2
+Give at least 2 examples of supervised methods.
+
+Question 3
+Give at least 2 examples of unsupervised methods.
+
+Question 4
+A quant developing a credit score wants to compare a logistic regression with a classification tree. Describe at least 2 advantages of using trees over logistic regressions.
