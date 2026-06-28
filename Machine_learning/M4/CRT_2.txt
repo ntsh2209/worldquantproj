@@ -1,0 +1,30 @@
+ML Collaborative Review Task 2
+
+
+Enter answer here
+
+0 / 1000
+Grade Criteria
+Hide
+Students are able to apply their knowledge of the content materials by doing the following:
+
+Accurately answer the question
+Provide clear and accurate arguments to support their answer
+Provide the required number of reasons to justify their answer
+Identify the correct data based on the scenarios
+Question	
+Question 1
+Identify 2 metrics the classification tree algorithm uses to decide on a split.
+
+Question 2
+1) What is the role of the tuning parameter C?
+2) What does a value of 0 imply?
+3) How do we choose C?
+
+Question 3
+1) According to the Coqueret & Guida reading, what form does the likelihood have?
+2) What seems to be more popular for financial factor modeling? Why?
+
+Question 4
+1) Explain the concept of bagging.
+2) Mention at least 2 advantages of bagging.
