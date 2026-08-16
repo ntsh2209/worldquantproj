@@ -1,0 +1,13 @@
+What is the difference between gradient descent (GD) and stochastic gradient descent (SGD)? Give at least 2 reasons.
+
+What does the cross-entropy loss function do? Give at least 2 items, such as its properties or purposes.
+
+Distinguish generalization from regularization. Be sure to explain each term, and then how they relate to each others.
+
+Write Python code to graph 2 non-linear activation functions. Examples include Sigmoid; Hyperbolic Tangent; Rectified Linear Unit; Softmax; and others.
+
+Max 1000 charcters to be used for each question and use abbreviation where possible to make answer dense
+
+
+
+
