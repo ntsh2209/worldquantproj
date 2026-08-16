@@ -8,6 +8,13 @@ Write Python code to graph 2 non-linear activation functions. Examples include S
 
 Max 1000 charcters to be used for each question and use abbreviation where possible to make answer dense
 
+Students are able to apply their knowledge of the content materials by doing the following:
+
+- Accurately answer the question
+- Provide clear and accurate arguments to support their answer
+- Provide the required number of reasons to justify their answer
+- Identify the correct data based on the scenarios
+
 
 
 
