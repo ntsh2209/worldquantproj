@@ -1,0 +1,4 @@
+Model,Complexity control,Tuned value,Train metric,Test metric,Diagnosis
+Ridge Regression,alpha (L2 penalty),11.66,MSE=0.00245,MSE=0.00312,Balanced -- moderate alpha reduces test error relative to near-unregularized OLS without over-shrinking
+Classification Tree,max_depth / ccp_alpha,depth=3,Acc=0.515,Acc=0.499,"Balanced -- shallow, pruned tree avoids the near-100%/50% train/test gap seen when unconstrained"
+MLP (Neural Network),hidden-layer width,32 units,AUC=0.649,AUC=0.494,Variance grows steadily with width (train AUC 0.53->0.74) while CV AUC stays flat near 0.47-0.50 throughout -- capacity is not buying real predictive power here
