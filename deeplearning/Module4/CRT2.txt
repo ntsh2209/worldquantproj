@@ -1,0 +1,36 @@
+1) What is a neural network module? Give both a conceptual and a computational interpretation
+2) Provide a method a module must have.
+
+Enter answer here
+
+0 / 1000
+Students are able to apply their knowledge of the content materials by doing the following:
+
+- Accurately answer the question
+- Provide clear and accurate arguments to support their answer
+- Provide the required number of reasons to justify their answer
+- Identify the correct data based on the scenarios
+
+Question 2
+Compare and contrast stride and padding.
+Students are able to apply their knowledge of the content materials by doing the following:
+
+- Accurately answer the question
+- Provide clear and accurate arguments to support their answer
+- Provide the required number of reasons to justify their answer
+- Identify the correct data based on the scenarios
+
+
+Question 3
+Read the paper: Bergstra J. 
+According to the Bergstra required reading,
+
+1) What is Ψ? Provide at least 2 answers.
+2) What affects Ψ?
+
+Provide at least two answers.
+
+Question 4
+According to the Bergstra required reading,
+1) What is meant by low effective dimensionality?
+2) Compare even coverage with random coverage
