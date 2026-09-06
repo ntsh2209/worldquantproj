@@ -1,0 +1,34 @@
+Quantitative Researcher in a collaborative team, with a focus on Asian equity markets. The ideal candidate combines quantitative skills with hands-on trading or desk quant experience in Asian equities.
+
+Preferred Location
+
+Hong Kong, Shanghai, Singapore, Tokyo, Dubai
+
+Principal Responsibilities
+
+Work alongside the team to develop and implement systematic equity trading strategies in Asian markets, including China Mainland, Japan, Hong Kong, and Taiwan
+Apply knowledge of Asian equity market rules, trading conventions, and venue characteristics to optimize strategy deployment
+Carry out quantitative research in alpha signals: idea generation, data processing, and statistical analysis
+Implement trading strategies across multiple venues
+Carry out market-specific analysis
+
+Preferred Technical Skills
+
+Expert in Python
+Proficient in modern data science tools (Jupyter, pandas, NumPy, scikit-learn)
+Degree in Mathematics, Computer Science, Statistics, or related STEM field from a top-ranked university
+Demonstrated knowledge of quantitative finance, mathematical modeling, statistical analysis, regression, and probability theory
+Excellent communication, problem-solving, and analytical skills
+
+Preferred Experience
+
+Direct trading or desk quant experience in Asian equity markets, with practical knowledge of market rules and trading conventions
+Minimum 2 years of experience in a quantitative trading, desk quant, or quantitative research role with exposure to live equity trading
+Experience working with multiple datasets and manipulating data (assessing quality, cleaning, creating features, etc.)
+
+Highly Valued Relevant Experience
+
+Hands-on experience with live systematic equity trading strategies in Asian markets
+Entrepreneurial mindset, self-motivated, detail-oriented, and able to work independently in a fast-paced environment
+Curiosity and critical thinking
+Eagerness to learn and grow professionally
