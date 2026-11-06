@@ -1,0 +1,20 @@
+
+1.How is it possible that all three trade types have win ratios greater than 50%? Provide two argumets at least
+2.What are examples of behavioral datasets? Give at least two examples.
+3.How do social trading platforms lead to data deluge? Give two examples.
+4. In ROI terms, do social trades outperform non-social trades? Why?
+
+Students are able to apply their knowledge of the content materials by doing the following:
+
+Accurately answer the question
+Provide clear and accurate arguments to support their answer
+Provide the required number of reasons to justify their answer
+Arguments are presented in a clear, organized, and logical manner
+No significant grammatical or spelling errors
+Arguments demonstrate a critical thought process
+Arguments demonstrate a certain level of research
+Provide proper citations
+
+
+
+
